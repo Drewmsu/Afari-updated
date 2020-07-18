@@ -1,0 +1,12 @@
+{
+  "name": "Afari",
+  "displayName": "Afari",
+  "expo": {
+    "name": "Afari",
+    "slug": "Afari",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
