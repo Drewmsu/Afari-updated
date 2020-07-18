@@ -1,0 +1,21 @@
+export const pallete = {
+  white: '#ffffff',
+  black: '#1d1d1d',
+  afariBlue: '#3a6b93',
+  afariGreen: '#3db5b5',
+  afariLightBlue: '#9bb5cc',
+  afariYellow: '#ffc30f',
+  lightGrey: '#939AA4',
+  lighterGrey: '#CDD4DA',
+  background: '#242424',
+  alterBackground: '#424242',
+  darkPrimary: '#303F9F',
+  defaultPrimary: '#3F51B5',
+  lightPrimary: '#C5CAE9',
+  textPrimary: '#FFFFFF',
+  accent: '#03A9F4',
+  primaryText: '#212121',
+  secondaryText: '#757575',
+  divider: '#BDBDBD',
+  selectedItemDrawer: '#64ffda'
+};

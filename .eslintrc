@@ -1,0 +1,19 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parser": "babel-eslint",
+  "env": {
+    "react-native/react-native": true
+  },
+  "plugins": ["react", "react-native", "prettier"],
+  "rules": {
+    "no-console": "off",
+    "react/prop-types": [0],
+    "react/forbid-prop-types": [0],
+    "react/require-default-props": [0],
+    "react/display-name": [0],
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 0,
+    "prettier/prettier": "error"
+  }
+}
