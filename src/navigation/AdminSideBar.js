@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, AsyncStorage, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Drawer, Divider } from 'react-native-paper';
 import { colors } from '../theme/appTheme';
 

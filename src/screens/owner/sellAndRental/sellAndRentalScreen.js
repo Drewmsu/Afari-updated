@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, FlatList, Platform, AsyncStorage, Alert } from 'react-native';
+import { View, StyleSheet, FlatList, Platform, Alert } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { List, Button, Text, IconButton } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import { Dropdown } from 'react-native-material-dropdown';

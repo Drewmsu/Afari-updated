@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, StatusBar, AsyncStorage } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import { WaveIndicator } from 'react-native-indicators';

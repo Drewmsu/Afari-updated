@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import {
-  AsyncStorage,
-  KeyboardAvoidingView,
-  StatusBar,
-  Platform,
-  View,
-  StyleSheet,
-  Image
-} from 'react-native';
+import { KeyboardAvoidingView, StatusBar, Platform, View, StyleSheet, Image } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { TextInput, Button } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import { scale, scaleVertical } from '../../utils/scale';

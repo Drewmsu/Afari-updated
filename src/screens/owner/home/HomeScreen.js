@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Alert, AsyncStorage } from 'react-native';
+import { View, StyleSheet, ScrollView, Alert } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Text, List, Surface, IconButton } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import constants from '../../../utils/constants';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Alert, AsyncStorage } from 'react-native';
+import { View, ScrollView, StyleSheet, Alert } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { List, Surface, IconButton } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import dateFnsFormat from 'date-fns/format';

@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  KeyboardAvoidingView,
-  AsyncStorage,
-  Alert
-} from 'react-native';
+import { View, StyleSheet, ScrollView, KeyboardAvoidingView, Alert } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { List, Divider, Button, Text, Searchbar, TextInput } from 'react-native-paper';
 import { SearchableFlatList } from 'react-native-searchable-list';
 import { WaveIndicator } from 'react-native-indicators';
