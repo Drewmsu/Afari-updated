@@ -34,8 +34,7 @@ PODS:
   - EXPermissions (9.0.1):
     - UMCore
     - UMPermissionsInterface
-  - EXSplashScreen (0.4.0):
-    - React
+  - EXSplashScreen (0.3.1):
     - UMCore
   - EXSQLite (8.2.1):
     - UMCore
@@ -597,7 +596,7 @@ SPEC CHECKSUMS:
   EXLocation: e93020e255f52a1cc031e0f45b0a24eb20fc4b55
   EXMediaLibrary: 267cf1daca04a4d71d20c5be0b82701fe6056a08
   EXPermissions: 80ac3acbdb145930079810fe5b08c022b3428aa8
-  EXSplashScreen: 1ef82f56e6bcb714d218c3278495d6ab5dc95c88
+  EXSplashScreen: c4ed5d39cd5dbc1329f8dec720e280276bafa28b
   EXSQLite: 64611c1b369c0f1e9cae4e551d0aa4478a58cadf
   EXUpdates: 5c9ccb55ea060e24e281d19248a50b7faba5fc59
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245

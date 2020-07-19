@@ -248,7 +248,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="info"
+                  icon="information"
                 />
               )}
             />
@@ -318,7 +318,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="local-atm"
+                  icon="cash"
                 />
               )}
             />
@@ -332,7 +332,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="attach-money"
+                  icon="currency-usd"
                 />
               )}
             />
@@ -346,7 +346,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="beenhere"
+                  icon="marker-check"
                 />
               )}
             />
@@ -360,7 +360,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="people"
+                  icon="account-multiple"
                 />
               )}
             />
@@ -388,7 +388,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="card-travel"
+                  icon="briefcase"
                 />
               )}
             />
@@ -402,7 +402,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="markunread-mailbox"
+                  icon="certificate"
                 />
               )}
             />
@@ -416,7 +416,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="schedule"
+                  icon="clock-outline"
                 />
               )}
             />
@@ -430,7 +430,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="account-balance"
+                  icon="scale-balance"
                 />
               )}
             />
@@ -444,7 +444,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="supervisor-account"
+                  icon="account-supervisor"
                 />
               )}
             />
@@ -458,7 +458,7 @@ class HomeMenuScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="insert-drive-file"
+                  icon="file"
                 />
               )}
             />

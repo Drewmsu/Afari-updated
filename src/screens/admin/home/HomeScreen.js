@@ -101,7 +101,7 @@ class HomeScreen extends Component {
                     {...props}
                     color={colors.afariGreen}
                     style={styles.listItemIcon}
-                    icon="arrow-forward"
+                    icon="arrow-right"
                   />
                 )}
               />

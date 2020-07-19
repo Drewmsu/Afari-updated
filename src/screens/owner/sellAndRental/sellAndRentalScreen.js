@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList, Platform, Alert } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import { List, Button, Text, IconButton } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
-import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from 'react-native-material-dropdown-v2';
 import ImageView from 'react-native-image-view';
 import SellAndRentalDisplayItem from '../../../components/shared/SaleAndRental/SaleAndRentalDisplayItem';
 import { colors, appTheme } from '../../../theme/appTheme';
@@ -333,7 +333,7 @@ class SellAndRentalScreen extends Component {
           title="Filtros"
           expanded={this.state.expanded}
           onPress={() => this._handleExpandedPress()}
-          left={(props) => <List.Icon {...props} icon="filter-list" />}>
+          left={(props) => <List.Icon {...props} icon="filter-variant" />}>
           <Dropdown
             label="Categoria"
             data={categorias}

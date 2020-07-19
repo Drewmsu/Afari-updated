@@ -73,7 +73,7 @@ class MaitenanceReceiptsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="arrow-forward"
+                  icon="arrow-right"
                 />
               )}
               onPress={() =>

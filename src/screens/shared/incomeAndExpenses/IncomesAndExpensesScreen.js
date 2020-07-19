@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, FlatList, Platform } from 'react-native';
 import { List, Divider, Button, Text } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
-import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from 'react-native-material-dropdown-v2';
 import { colors, appTheme } from '../../../theme/appTheme';
 import { dropdownStyles } from '../../../theme/shared';
 import { urls } from '../../../services/api/afari';
@@ -127,7 +127,7 @@ class IncomesAndExpensesScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="arrow-forward"
+                  icon="arrow-right"
                 />
               )}
               onPress={() => this._downloadReceiptHandler(item)}
@@ -145,7 +145,7 @@ class IncomesAndExpensesScreen extends Component {
           title="Filtros"
           expanded={this.state.expanded}
           onPress={() => this._handleExpandedPress()}
-          left={(props) => <List.Icon {...props} icon="filter-list" />}>
+          left={(props) => <List.Icon {...props} icon="filter-variant" />}>
           <Dropdown
             label="Año"
             data={years}
