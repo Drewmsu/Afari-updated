@@ -77,7 +77,7 @@ class HomeMenuScreen extends Component {
   };
 
   _deliquencyChartHandler = async () => {
-    const date = dateFnsFormat(new Date(), 'DD/MM/YYYY');
+    const date = dateFnsFormat(new Date(), 'dd/MM/yyyy');
     let downloadUrl = `${urls.getCuadroMorosidad}?edificioId=${this.state.building.id}`;
     let fileName = `CuadroMoroso_${this.state.building.name.replace(' ', '-')}_${date
       .replace('/', '_')

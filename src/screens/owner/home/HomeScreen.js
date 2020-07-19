@@ -190,7 +190,7 @@ class HomeScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="local-atm"
+                  icon="cash"
                 />
               )}
             />
@@ -204,7 +204,7 @@ class HomeScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="attach-money"
+                  icon="cash-usd"
                 />
               )}
             />
@@ -218,7 +218,7 @@ class HomeScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="beenhere"
+                  icon="marker-check"
                 />
               )}
             />

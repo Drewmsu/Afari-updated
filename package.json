@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/progress-bar-android": "^1.0.3",
+    "@react-native-community/progress-view": "^1.1.0",
     "date-fns": "^2.15.0",
     "expo": "~38.0.1",
     "expo-media-library": "~8.2.1",

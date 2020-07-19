@@ -1447,7 +1447,7 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/progress-bar-android/-/progress-bar-android-1.0.3.tgz#a6adc7be7a531269869d653ad9e0cd3d093d7c1c"
   integrity sha512-Xy+nTCibCLQ6Jy0YNlVwrO+m/j2el6PN8nVQcdgVqp+Jm1XTguq7xjxUV5spzYmVDIVx+zW7WKfkeSbhUk91Tg==
 
-"@react-native-community/progress-view@^1.0.3":
+"@react-native-community/progress-view@^1.0.3", "@react-native-community/progress-view@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.1.0.tgz#d44e7acb91bfb320019f088c7cd8030e5afcfa02"
   integrity sha512-gsDunmO4blEvcI02NP5Dj+Hk7Qz+9DOhk23DALnICMps/sEr4OKSGk9irvz1ptwTAssWOEdV2uCd9PV7hlqd4A==

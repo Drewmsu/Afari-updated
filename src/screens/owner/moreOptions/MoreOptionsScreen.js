@@ -109,7 +109,7 @@ class MoreOptionsScreen extends Component {
   };
 
   _deliquencyChartHandler = async () => {
-    const date = dateFnsFormat(new Date(), 'DD/MM/YYYY');
+    const date = dateFnsFormat(new Date(), 'dd/MM/yyyy');
     let downloadUrl = `${urls.getCuadroMorosidad}?edificioId=${this.state.building.id}`;
     let fileName = `CuadroMoroso_${this.state.building.name.replace(' ', '-')}_${date
       .replace('/', '_')
@@ -237,7 +237,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="local-atm"
+                  icon="cash"
                 />
               )}
             />
@@ -251,7 +251,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="attach-money"
+                  icon="cash-usd"
                 />
               )}
             />
@@ -265,7 +265,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="beenhere"
+                  icon="marker-check"
                 />
               )}
             />
@@ -307,21 +307,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="card-travel"
-                />
-              )}
-            />
-          </Surface>
-          <Surface style={styles.surface}>
-            <List.Item
-              title="Normas de Convivencia"
-              onPress={() => this._houseRulesHandler()}
-              left={(props) => (
-                <List.Icon
-                  {...props}
-                  color={colors.afariGreen}
-                  style={styles.listItemIcon}
-                  icon="assignment"
+                  icon="briefcase"
                 />
               )}
             />
@@ -335,7 +321,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="markunread-mailbox"
+                  icon="certificate"
                 />
               )}
             />
@@ -349,7 +335,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="schedule"
+                  icon="clock-outline"
                 />
               )}
             />
@@ -363,7 +349,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="account-balance"
+                  icon="scale-balance"
                 />
               )}
             />
@@ -377,7 +363,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="supervisor-account"
+                  icon="account-supervisor"
                 />
               )}
             />
@@ -391,7 +377,7 @@ class MoreOptionsScreen extends Component {
                   {...props}
                   color={colors.afariGreen}
                   style={styles.listItemIcon}
-                  icon="insert-drive-file"
+                  icon="file"
                 />
               )}
             />
