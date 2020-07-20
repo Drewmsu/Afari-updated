@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jpk-pe-7wv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="YNU-VO-37Z">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenViewController" id="Jpk-pe-7wv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TDE-ay-rUa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jpc-qp-QBI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="GDx-3T-v4k" userLabel="SplashScreen">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GDx-3T-v4k" firstAttribute="leading" secondItem="TDE-ay-rUa" secondAttribute="leading" id="68e-fQ-Wph"/>
+                            <constraint firstItem="GDx-3T-v4k" firstAttribute="top" secondItem="TDE-ay-rUa" secondAttribute="top" id="8qu-hv-uXh"/>
+                            <constraint firstItem="jpc-qp-QBI" firstAttribute="top" secondItem="TDE-ay-rUa" secondAttribute="top" id="HiK-TE-KVh"/>
+                            <constraint firstAttribute="trailing" secondItem="GDx-3T-v4k" secondAttribute="trailing" id="Sfl-D8-CIP"/>
+                            <constraint firstAttribute="bottom" secondItem="GDx-3T-v4k" secondAttribute="bottom" id="TAT-e2-ty5"/>
+                            <constraint firstAttribute="bottom" secondItem="jpc-qp-QBI" secondAttribute="bottom" id="i4C-n4-SzB"/>
+                            <constraint firstAttribute="trailing" secondItem="jpc-qp-QBI" secondAttribute="trailing" id="wXT-Ee-dQy"/>
+                            <constraint firstItem="jpc-qp-QBI" firstAttribute="leading" secondItem="TDE-ay-rUa" secondAttribute="leading" id="yhr-0g-3L5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="waV-gQ-rmi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WkO-I7-2O2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SplashScreen" width="800" height="212"/>
+        <image name="SplashScreenBackground" width="0.5" height="0.5"/>
+    </resources>
+</document>
