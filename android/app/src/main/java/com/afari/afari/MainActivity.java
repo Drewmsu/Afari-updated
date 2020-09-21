@@ -1,4 +1,4 @@
-package com.afari;
+package com.afari.afari;
 
 import android.os.Bundle;
 

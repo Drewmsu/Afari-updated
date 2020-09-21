@@ -1,4 +1,4 @@
-package com.afari.generated;
+package com.afari.afari.generated;
 
 import java.util.Arrays;
 import java.util.List;
