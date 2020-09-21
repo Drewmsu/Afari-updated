@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import { KeyboardAvoidingView, StatusBar, Platform, View, StyleSheet, Image } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  StatusBar,
+  Platform,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity
+} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput, Button, Text } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import { scale, scaleVertical } from '../../utils/scale';
 import { colors } from '../../theme/appTheme';
@@ -70,6 +78,17 @@ class SignInScreen extends Component {
       });
   };
 
+  _nonAccountLogin = async () => {
+    this.setState({
+      isLoading: true,
+      username: 'Demo',
+      password: 'Demo'
+    });
+    setTimeout(async () => {
+      await this._loginHandler();
+    }, 500);
+  };
+
   render() {
     return !this.state.isLoading ? (
       <KeyboardAvoidingView style={styles.screen} behavior="padding">
@@ -97,6 +116,12 @@ class SignInScreen extends Component {
               autoCorrect={false}
               secureTextEntry
             />
+            <TouchableOpacity onPress={() => this._nonAccountLogin()}>
+              <Text style={styles.testAccountText}>
+                No tienes una cuenta? Usa nuestra cuenta de prueba
+                <Text style={{ fontWeight: 'bold' }}> aquí</Text>
+              </Text>
+            </TouchableOpacity>
             <Button
               style={styles.signInButtom}
               mode="outlined"
@@ -141,6 +166,9 @@ const styles = StyleSheet.create({
   logo: {
     width: '100%',
     height: '100%'
+  },
+  testAccountText: {
+    marginTop: 10
   },
   inputContainer: {
     flex: 2,
