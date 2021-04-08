@@ -1,4 +1,4 @@
-package com.afari.generated;
+package com.afari.afari.generated;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,6 +15,7 @@ public class BasePackageList {
         new expo.modules.keepawake.KeepAwakePackage(),
         new expo.modules.lineargradient.LinearGradientPackage(),
         new expo.modules.location.LocationPackage(),
+        new expo.modules.medialibrary.MediaLibraryPackage(),
         new expo.modules.permissions.PermissionsPackage(),
         new expo.modules.splashscreen.SplashScreenPackage(),
         new expo.modules.sqlite.SQLitePackage(),
