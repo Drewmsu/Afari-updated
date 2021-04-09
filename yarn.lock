@@ -1442,18 +1442,23 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
-"@react-native-community/progress-bar-android@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@react-native-community/progress-bar-android/-/progress-bar-android-1.0.3.tgz#a6adc7be7a531269869d653ad9e0cd3d093d7c1c"
-  integrity sha512-Xy+nTCibCLQ6Jy0YNlVwrO+m/j2el6PN8nVQcdgVqp+Jm1XTguq7xjxUV5spzYmVDIVx+zW7WKfkeSbhUk91Tg==
+"@react-native-community/progress-bar-android@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@react-native-community/progress-bar-android/-/progress-bar-android-1.0.4.tgz#2601353b23a7ad76a59e5b0981e0b08c39902708"
+  integrity sha512-O7UCpXDXlpxIx2eusj6bc8noJ5KyXZjnad0NQig9myq6iV4D9uGVziSj6J2v46dTnMd9iTX60szBu1LvsUO6rg==
 
-"@react-native-community/progress-view@^1.0.3", "@react-native-community/progress-view@^1.1.0":
+"@react-native-community/progress-view@^1.0.3":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.1.0.tgz#d44e7acb91bfb320019f088c7cd8030e5afcfa02"
   integrity sha512-gsDunmO4blEvcI02NP5Dj+Hk7Qz+9DOhk23DALnICMps/sEr4OKSGk9irvz1ptwTAssWOEdV2uCd9PV7hlqd4A==
   dependencies:
     babel "^6.23.0"
     babel-runtime "^6.26.0"
+
+"@react-native-community/progress-view@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.2.4.tgz#2293e8a683144a788a926e0ed19cbc5eb9c1192f"
+  integrity sha512-NTraRANHf51S1hXePh1CZTn35LmkHJYi1en0fTWIoFbuGOEGIYg3/Vpm6ccqigQt9+Np3l7Qu/WfAEqjOn6udQ==
 
 "@react-navigation/core@~3.4.1":
   version "3.4.2"
@@ -6658,12 +6663,12 @@ react-native-paper@^4.0.1:
     color "^3.1.2"
     react-native-safe-area-view "^0.14.9"
 
-react-native-pdf@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-pdf/-/react-native-pdf-6.2.0.tgz#e6da125b407338b7bca15d7f776b70773c37304f"
-  integrity sha512-OSgF3+PryUl0GIPvZhCXT7VDv9LbvjC7LJgH3aFObCq0WRiiSGf9W1yrhaYmNV3FvL7ZARKF08h+k4LuFcTPNg==
+react-native-pdf@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-pdf/-/react-native-pdf-6.3.0.tgz#17bf7381904ae3a45d4800679c744d3e02457c60"
+  integrity sha512-iT2GTRw6tMoCO4vRYKwIyXnhQ+XPW8trK+YlbMpsnF8dx2n7ssSdcutuIDnDvZ/fM3CqKJizVSQMWbyOd4O2+w==
   dependencies:
-    "@react-native-community/progress-bar-android" "^1.0.3"
+    "@react-native-community/progress-bar-android" "^1.0.4"
     "@react-native-community/progress-view" "^1.0.3"
     crypto-js "^3.2.0"
     prop-types "^15.7.2"
@@ -6703,6 +6708,11 @@ react-native-searchable-list@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/react-native-searchable-list/-/react-native-searchable-list-1.1.3.tgz#d56884352f040cde058b251cc37c104ca532c604"
   integrity sha512-dYuc2hCaEvu3CQcIJgEsJpHAuu4VLMkRJDGdFOlS68QQrO1/0IjrjIewOD3QDuAW8XmTcuEyCgE3r2+GidJ3oQ==
+
+react-native-share@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-5.2.0.tgz#6170c218c869066c3a589414fa9cf922ddc4228a"
+  integrity sha512-pPXiczgLVUp/RyxdLsQ6oBW2atmuMaTIAnh7/gzGvcCPLPavFViih5QsAFtfljCNEHah4jRXDbM3aAsttCY2sw==
 
 react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
   version "1.4.1"

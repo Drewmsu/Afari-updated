@@ -62,7 +62,7 @@ class EmployeeScreen extends Component {
             charge={item.cargo}
             name={item.nombre}
             dni={item.dni}
-            //image={item.foto}
+            image={item.foto}
           />
         )}
         keyExtractor={(item) => `${item.trabajadorId}`}

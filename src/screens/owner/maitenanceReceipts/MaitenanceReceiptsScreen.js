@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import { List, Text, Divider } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
+
 import { colors } from '../../../theme/appTheme';
 import { urls } from '../../../services/api/afari';
 

@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { List, Divider, Button, Text, Searchbar, TextInput } from 'react-native-paper';
 import { SearchableFlatList } from 'react-native-searchable-list';
 import { WaveIndicator } from 'react-native-indicators';
+
 import { colors } from '../../../theme/appTheme';
 import { urls } from '../../../services/api/afari';
 import constants from '../../../utils/constants';
@@ -271,7 +272,7 @@ class SendEmailScreen extends Component {
                       {...props}
                       color={colors.afariGreen}
                       style={styles.listItemIcon}
-                      icon={item.checked ? 'check-box' : 'check-box-outline-blank'}
+                      icon={item.checked ? 'check-box-outline' : 'checkbox-blank-outline'}
                     />
                   )}
                   onPress={() => this._handleRecipientListItemPress(item.id)}
@@ -292,7 +293,7 @@ class SendEmailScreen extends Component {
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps="always">
           <List.Accordion
-            title="Destinatarios"
+            title="Destinatarios (selecciona aqui)"
             expanded={recipientsExpanded}
             style={{ marginTop: 5 }}
             onPress={() => this._handleRecipientsExpandedPress()}>
@@ -305,7 +306,7 @@ class SendEmailScreen extends Component {
                     {...props}
                     color={colors.afariGreen}
                     style={styles.listItemIcon}
-                    icon={this.state.allChecked ? 'check-box' : 'check-box-outline-blank'}
+                    icon={this.state.allChecked ? 'check-box-outline' : 'checkbox-blank-outline'}
                   />
                 )}
                 onPress={() => this._selectAllHandler(!this.state.allChecked)}
@@ -318,7 +319,7 @@ class SendEmailScreen extends Component {
                     {...props}
                     color={colors.afariGreen}
                     style={styles.listItemIcon}
-                    icon={this.state.ownersChecked ? 'check-box' : 'check-box-outline-blank'}
+                    icon={this.state.ownersChecked ? 'check-box-outline' : 'checkbox-blank-outline'}
                   />
                 )}
                 right={(props) => (
@@ -339,7 +340,7 @@ class SendEmailScreen extends Component {
                     {...props}
                     color={colors.afariGreen}
                     style={styles.listItemIcon}
-                    icon={this.state.tenantChecked ? 'check-box' : 'check-box-outline-blank'}
+                    icon={this.state.tenantChecked ? 'check-box-outline' : 'checkbox-blank-outline'}
                   />
                 )}
                 right={(props) => (

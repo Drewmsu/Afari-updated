@@ -3,6 +3,8 @@ import { View, StyleSheet, FlatList, Platform } from 'react-native';
 import { List, Button, Text, Divider } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import { Dropdown } from 'react-native-material-dropdown-v2';
+import AsyncStorage from '@react-native-community/async-storage';
+
 import { colors, appTheme } from '../../../theme/appTheme';
 import { dropdownStyles } from '../../../theme/shared';
 import { urls } from '../../../services/api/afari';
@@ -31,11 +33,12 @@ class VouchersScreen extends Component {
     let timeUnitsUrl = `${urls.getUnidadTiempo}?FlagEsActivo=true`;
     await fetch(timeUnitsUrl)
       .then((res) => res.json())
-      .then((parsedRes) => {
+      .then(async (parsedRes) => {
         if (parsedRes.error) {
           alert(parsedRes.mensaje);
         } else {
           let timeUnits = [];
+
           parsedRes.lstUnidadTiempo.map((item) => {
             let timeUnit = {
               id: item.unidadTiempoId,
@@ -43,6 +46,13 @@ class VouchersScreen extends Component {
             };
             timeUnits.push(timeUnit);
           });
+
+          const role = await AsyncStorage.getItem(constants.user.role);
+
+          if (role === 'PRO' || role === 'INQ') {
+            timeUnits.shift();
+          }
+
           this.setState({
             timeUnits: timeUnits,
             selectedTimeUnit: timeUnits[0]

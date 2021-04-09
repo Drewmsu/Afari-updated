@@ -3,9 +3,12 @@ import { View, StyleSheet, FlatList, Platform } from 'react-native';
 import { List, Divider, Button, Text } from 'react-native-paper';
 import { WaveIndicator } from 'react-native-indicators';
 import { Dropdown } from 'react-native-material-dropdown-v2';
+import AsyncStorage from '@react-native-community/async-storage';
+
 import { colors, appTheme } from '../../../theme/appTheme';
 import { dropdownStyles } from '../../../theme/shared';
 import { urls } from '../../../services/api/afari';
+import constants from '../../../utils/constants';
 
 class IncomesAndExpensesScreen extends Component {
   static navigationOptions = {
@@ -42,15 +45,25 @@ class IncomesAndExpensesScreen extends Component {
     let timeUnitsUrl = `${urls.getUnidadTiempo}?FlagEsActivo=true`;
     await fetch(timeUnitsUrl)
       .then((res) => res.json())
-      .then((parsedRes) => {
+      .then(async (parsedRes) => {
         if (parsedRes.error) {
           alert(parsedRes.mensaje);
         } else {
+          const timeUnitsToRender = parsedRes.lstUnidadTiempo.filter((x) =>
+            x.nombre.includes(this.state.selectedYear.value)
+          );
+          const role = await AsyncStorage.getItem(constants.user.role);
+
+          if (
+            (role === 'PRO' || role === 'INQ') &&
+            new Date().getFullYear() === this.state.years[0].id
+          ) {
+            timeUnitsToRender.shift();
+          }
+
           this.setState({
             timeUnits: parsedRes.lstUnidadTiempo,
-            renderedTimeUnits: parsedRes.lstUnidadTiempo.filter((x) =>
-              x.nombre.includes(this.state.selectedYear.value)
-            )
+            renderedTimeUnits: timeUnitsToRender
           });
         }
       })
@@ -59,18 +72,29 @@ class IncomesAndExpensesScreen extends Component {
       });
   };
 
-  _filterTimeUnits = () => {
+  _filterTimeUnits = async () => {
     let timeUnitsToRender = [
       ...this.state.timeUnits.filter((x) => x.nombre.includes(this.state.selectedYear.value))
     ];
+    const role = await AsyncStorage.getItem(constants.user.role);
+
+    if (
+      (role === 'PRO' || role === 'INQ') &&
+      new Date().getFullYear() === this.state.selectedYear.id
+    ) {
+      timeUnitsToRender.shift();
+    }
+
     this.setState({ renderedTimeUnits: timeUnitsToRender });
   };
 
   //Fetch Data for the first time
   getAllData = async () => {
     this.setState({ firstLoading: true });
+
     await this._setYears();
     await this._getTimeUnits();
+
     this.setState({ firstLoading: false });
   };
 

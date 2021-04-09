@@ -32,7 +32,7 @@ class CloseFeesScreen extends Component {
       { id: 1, value: 'Pagado' }
     ],
     selectedApartment: { id: '', value: 'Todos' },
-    selectedApartmentState: { id: '', value: 'Todos' },
+    selectedApartmentState: { id: 0, value: 'Sin Pagar' },
     currentTimeUnitId: null,
     fees: []
   };

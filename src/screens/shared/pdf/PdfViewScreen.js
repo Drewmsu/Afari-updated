@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Alert, ActivityIndicator, Platform, Dimensions } from 'react-native';
 import { FileSystem, Permissions } from 'react-native-unimodules';
+import RNFetchBlob from 'rn-fetch-blob';
+import { Button } from 'react-native-paper';
 import * as MediaLibrary from 'expo-media-library';
 import PDFReader from 'react-native-pdf';
+import RNFS from 'react-native-fs';
+import Share from 'react-native-share';
+
 import { colors } from '../../../theme/appTheme';
 import constants from '../../../utils/constants';
 
@@ -22,13 +27,13 @@ class PdfViewScreen extends Component {
   _setType = async () => {
     switch (this.state.viewType) {
       case constants.viewType.pdf:
-        this.setState({ type: 'pdf' });
+        this.setState({ type: 'application/pdf' });
         break;
       case constants.viewType.web:
         this.setState({ type: 'web' });
         break;
       default:
-        this.setState({ type: 'pdf' });
+        this.setState({ type: 'application/pdf' });
         break;
     }
   };
@@ -37,8 +42,6 @@ class PdfViewScreen extends Component {
     const { downloadUri, fileName } = this.state;
 
     if (Platform.OS === 'ios') {
-      const RNFS = require('react-native-fs');
-
       const finalDownloadUri = downloadUri.replace(/ /g, '%20');
       const finalFileName = fileName.replace(/ /g, '_');
 
@@ -90,10 +93,35 @@ class PdfViewScreen extends Component {
     }
   };
 
+  sharePDFWithIOS = async () => {
+    await Share.open({
+      type: this.state.type,
+      url: 'file://' + this.state.uri
+    });
+  };
+
+  sharePDFWithAndroid = async (fileUrl, type) => {
+    let filePath = null;
+    const configOptions = { fileCache: true };
+    RNFetchBlob.config(configOptions)
+      .fetch('GET', fileUrl)
+      .then((resp) => {
+        filePath = resp.path();
+        return resp.readFile('base64');
+      })
+      .then(async (base64Data) => {
+        base64Data = `data:${type};base64,` + base64Data;
+        await Share.open({ url: base64Data });
+        // remove the image or pdf from device's storage
+        await RNFS.unlink(filePath);
+      });
+  };
+
   componentDidMount() {
     this._setType();
     this._downloadMaitanceRecipt();
   }
+
   render() {
     let spinner = <ActivityIndicator size="large" color={colors.afariGreen} />;
     return this.state.uri ? (
@@ -105,29 +133,13 @@ class PdfViewScreen extends Component {
           }}
           style={styles.pdf}
         />
-        {/* {this.state.type === 'pdf' ? (
-          <PDFReader
-            source={{ uri: this.state.uri }}
-            onLoadComplete={(numberOfPages, filePath) => {
-              console.log(`number of pages: ${numberOfPages}`);
-            }}
-            onPageChanged={(page, numberOfPages) => {
-              console.log(`current page: ${page}`);
-            }}
-            onError={error => {
-              console.log(error);
-            }}
-            style={styles.pdf}
-          />
-        ) : (
-          <WebView
-            source={{
-              uri:
-                'https://drive.google.com/viewerng/viewer?embedded=true&url=' +
-                this.state.downloadUri
-            }}
-          />
-        )} */}
+        <Button
+          icon="share-variant"
+          mode="contained"
+          style={{ position: 'absolute', bottom: 50, right: 10 }}
+          onPress={Platform.OS === 'ios' ? this.sharePDFWithIOS : this.sharePDFWithAndroid}>
+          Share
+        </Button>
       </View>
     ) : (
       <View style={styles.loadingContainer}>{spinner}</View>
